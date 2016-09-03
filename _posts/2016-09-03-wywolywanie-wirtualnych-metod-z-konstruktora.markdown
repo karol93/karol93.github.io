@@ -23,7 +23,7 @@ public class BaseClass
 }
 {% endhighlight %}
 
-Przedstawiona klasa posiada wywołanie w konstruktorze metody DoSomething, która inicjalizuje wartość właściwości Text, a następnie po wyjściu z tej metody wyświetlana jest na ekranie liczba znaków właściwości Text. Przechodzą do wspominanej groźnej sytuacji niech metoda DoSomething będzie oznaczona jako virtual
+Przedstawiona klasa posiada wywołanie w konstruktorze metody *DoSomething*, która inicjalizuje wartość właściwości *Text*, a następnie po wyjściu z tej metody wyświetlana jest na ekranie liczba znaków właściwości *Text*. Przechodzą do wspominanej groźnej sytuacji niech metoda *DoSomething* będzie oznaczona jako **virtual**.
 
 {% highlight csharp %}
 public class DerivedClass : BaseClass
@@ -35,6 +35,6 @@ public class DerivedClass : BaseClass
 }
 {% endhighlight %}
 
-Prosta klasa, która dziedziczy po klasie BaseClass i nadpisuje metodę DoSomething, chociażby w taki sposób, że jest pusta. Przy tworzeniu obiektu klasy DerivedClass zaistnieje następująca sytuacja. W pierwszej kolejności zostanie wywołany konstruktor klasy bazowej, w którym wywoływana jest metoda DoSomething. Jednakże w klasie dziedziczącej jest ona nadpisana, więc nie odbędzie się przypisanie pewnej wartości do właściwości Text jak w poprzedniej sytuacji. Po opuszczeniu metody, będzie wykonywana dalsza cześć konstruktora, w której na ekran wyświetlana jest właściwość Length i w tym momencie ukaże się wyjątek System.NullReferenceException ponieważ domyślną wartość typu string jest null i dostęp do właściwości Length jest niemożliwy.
+Prosta klasa, która dziedziczy po klasie *BaseClass* i nadpisuje metodę *DoSomething*, chociażby w taki sposób, że jest pusta. Przy tworzeniu obiektu klasy *DerivedClass* zaistnieje następująca sytuacja. W pierwszej kolejności zostanie wywołany konstruktor klasy bazowej, w którym wywoływana jest metoda *DoSomething*. Jednakże w klasie dziedziczącej jest ona nadpisana, więc nie odbędzie się przypisanie pewnej wartości do właściwości *Text* jak w poprzedniej sytuacji. Po opuszczeniu metody, będzie wykonywana dalsza cześć konstruktora, w której na ekran wyświetlana jest właściwość *Length* i w tym momencie ukaże się wyjątek **System.NullReferenceException** ponieważ domyślną wartość typu string jest null i dostęp do właściwości *Length* jest niemożliwy.
 
-Warto zauważyć, że Resharper przed taką czynnością próbuje ostrzec komunikatem, że istnieje próba wywołania metody wirtualnej z konstruktora klasy i zaleca uczynić daną klasę sealed, co z kolei zapobiegło by możliwości dziedziczenia po takiej klasie.
+Warto zauważyć, że *Resharper* przed taką czynnością próbuje ostrzec komunikatem, że istnieje próba wywołania metody wirtualnej z konstruktora klasy i zaleca uczynić daną klasę **sealed**, co z kolei zapobiegło by możliwości dziedziczenia po takiej klasie.
