@@ -2,9 +2,9 @@ excerpt_separator: ""
 pygments: true
 markdown: kramdown
 url: http://karol93.github.io
-title: Awesome
+title: .NET & JavaScript
 email: karol.suchecki93@gmail.com
 author: karol93
-description: My awesome new site
+description: .NET & JavaScript
 paginate: 5
 google_analytics: 
