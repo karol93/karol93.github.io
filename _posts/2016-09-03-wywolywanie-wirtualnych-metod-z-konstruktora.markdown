@@ -2,6 +2,7 @@
 published: true
 title: Wywoływanie wirtualnych metod z konstruktora
 layout: post
+tags: [c#]
 ---
 Jak wiadomo klasy w języku C# mogą po sobie dziedziczyć. Proces dziedziczenia pozwala na tworzenie nowych klas, które mogą rozszerzać i modyfikować zachowanie innych klas. Zakładając, że klasa A posiada metodę X, a klasa B dziedziczy po klasie A, to w klasie B można używać implementacji metody z klasy A. Poprzez rozszerzalność można w tym przypadku rozumieć, że dopisujemy pewne specyficzne dla klasy B metody, których klasa A nie potrzebuje. W przypadku modyfikacji, można całkowicie zmienić zachowanie dziedziczonej metody X z klasy A. Aby było to możliwe należy skorzystać z dwóch słów kluczowych przy deklaracji metod. W klasie bazowej trzeba wykorzystać słowo **virtual**, natomiast w klas dziedziczącej słowo **override**. Dodać warto na koniec, że konstruktory klas nie podlegają procesowi dziedziczenia. Gdy tworzona zostanie instancja klasy dziedziczącej, to w pierwszej kolejności wywoła się konstruktor klasy bazowej. W związku z kolejnością wywoływań konstruktorów i wywołań w nich metod oznaczonych jak virtual wiąże się pewne niebezpieczeństwo.
 
