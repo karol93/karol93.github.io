@@ -2,6 +2,8 @@
 published: true
 title: Test
 layout: post
+tags: [c#, ]
+categories: [c#]
 ---
 Testujmy to
 # test
