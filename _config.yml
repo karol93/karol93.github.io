@@ -1,0 +1,10 @@
+excerpt_separator: ""
+pygments: true
+markdown: kramdown
+url: http://karol93.github.io
+title: Awesome
+email: karol.suchecki93@gmail.com
+author: karol93
+description: My awesome new site
+paginate: 5
+google_analytics: 
